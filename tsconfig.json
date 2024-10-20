@@ -15,7 +15,12 @@
     "isolatedModules": true,
     "noEmit": false,
     "jsx": "react-jsx",
-    "types": ["chrome", "wicg-file-system-access"]
+    "types": ["chrome", "wicg-file-system-access"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "outDir": "./dist"
   },
-  "include": ["src"]
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }

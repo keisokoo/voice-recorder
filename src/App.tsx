@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./App.scss";
 import { WavRecorder } from "./WavRecorder";
 import { WavRenderer } from "./WavRenderer";
+import WriteTest from "./WriteTest";
 
 const App: React.FC = () => {
   const [micPermission, setMicPermission] = useState<boolean>(false);
@@ -127,7 +128,7 @@ const App: React.FC = () => {
 
   return (
     <div className="app-container">
-      <h1>오디오 입력 확인</h1>
+      <h1>오디오 입력 확인1</h1>
       {error && <p className="error-message">{error}</p>}
       <p className="status-info">
         마이크 권한 상태: {micPermission ? "허용됨" : "대기 중"}
@@ -156,6 +157,7 @@ const App: React.FC = () => {
           </div>
         </>
       )}
+      <WriteTest />
     </div>
   );
 };
